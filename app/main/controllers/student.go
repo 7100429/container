@@ -1,8 +1,8 @@
 package controllers
 
 import (
-	"container/app/main/models/request"
-	"container/app/main/services"
+	"gitee.com/chensyf/container/app/main/models/request"
+	"gitee.com/chensyf/container/app/main/services"
 	"github.com/gin-gonic/gin"
 	"net/http"
 )

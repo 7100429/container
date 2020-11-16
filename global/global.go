@@ -1,7 +1,7 @@
 package global
 
 import (
-	"container/config"
+	"gitee.com/chensyf/container/config"
 	"github.com/jinzhu/gorm"
 )
 

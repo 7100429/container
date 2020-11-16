@@ -1,9 +1,9 @@
 package initialize
 
 import (
-	"container/app/main/controllers"
-	_ "container/docs"
-	"container/global"
+	"gitee.com/chensyf/container/app/main/controllers"
+	_ "gitee.com/chensyf/container/docs"
+	"gitee.com/chensyf/container/global"
 	"github.com/gin-gonic/gin"
 	"github.com/swaggo/files"
 	"github.com/swaggo/gin-swagger"

@@ -1,9 +1,9 @@
 package main
 
 import (
-	"container/global"
-	"container/initialize"
 	"fmt"
+	"gitee.com/chensyf/container/global"
+	"gitee.com/chensyf/container/initialize"
 	"log"
 )
 

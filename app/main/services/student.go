@@ -1,10 +1,10 @@
 package services
 
 import (
-	"container/app/main/dao"
-	"container/app/main/models"
-	"container/app/main/models/request"
 	"errors"
+	"gitee.com/chensyf/container/app/main/dao"
+	"gitee.com/chensyf/container/app/main/models"
+	"gitee.com/chensyf/container/app/main/models/request"
 )
 
 type studentService struct {}

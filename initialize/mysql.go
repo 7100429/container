@@ -1,8 +1,8 @@
 package initialize
 
 import (
-	"container/global"
 	"fmt"
+	"gitee.com/chensyf/container/global"
 	"github.com/jinzhu/gorm"
 	_ "github.com/jinzhu/gorm/dialects/mysql"
 	"log"

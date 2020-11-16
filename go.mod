@@ -1,4 +1,4 @@
-module container
+module gitee.com/chensyf/container
 
 go 1.14
 

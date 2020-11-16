@@ -1,7 +1,7 @@
 package initialize
 
 import (
-	"container/global"
+	"gitee.com/chensyf/container/global"
 	"github.com/go-ini/ini"
 	"log"
 	"time"
