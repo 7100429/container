@@ -1,0 +1,92 @@
+definitions:
+  models.Student:
+    properties:
+      grade:
+        type: number
+      id:
+        type: integer
+      name:
+        type: string
+      student_id:
+        type: string
+    type: object
+  request.Student:
+    properties:
+      grade:
+        type: number
+      name:
+        type: string
+      student_id:
+        type: string
+    required:
+    - grade
+    - name
+    - student_id
+    type: object
+info:
+  contact: {}
+  description: 容器化Student
+  termsOfService: https://github.com/swaggo/gin-swagger
+  title: 容器化Student
+  version: "1.0"
+paths:
+  /student:
+    get:
+      consumes:
+      - application/json
+      description: 根据姓名查询学生
+      parameters:
+      - description: 姓名
+        in: query
+        name: name
+        required: true
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/models.Student'
+      summary: 根据姓名查询学生
+      tags:
+      - 学生
+    post:
+      consumes:
+      - application/json
+      description: 新增学生信息
+      parameters:
+      - description: 学生信息
+        in: body
+        name: studentRequest
+        required: true
+        schema:
+          $ref: '#/definitions/request.Student'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: 创建成功
+          schema:
+            type: string
+      summary: 新增学生信息
+      tags:
+      - 学生
+  /students:
+    get:
+      consumes:
+      - application/json
+      description: 查询所有学生
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            items:
+              $ref: '#/definitions/models.Student'
+            type: array
+      summary: 查询所有学生
+      tags:
+      - 学生
+swagger: "2.0"

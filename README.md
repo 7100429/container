@@ -13,6 +13,7 @@
 | ----- | --------------------------------------------- | ---------------- |
 | GIN   | https://github.com/gin-gonic/gin              | Web框架          |
 | Gorm  | https://github.com/jinzhu/gorm                | ORM框架          |
-| Swag  |                                               | 接口文档         |
+| Swag  | https://github.com/swaggo/swag/blob/master/README_zh-CN.md | 接口文档         |
 | Redis | https://github.com/go-redis/redis             | 缓存             |
-| Mysql | https://github.com/jinzhu/gorm/dialects/mysql | 关系型数据库驱动 |
+| Mysql | https://github.com/jinzhu/gorm/dialects/mysql | 关系型数据库驱动   |
+
