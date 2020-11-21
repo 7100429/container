@@ -9,6 +9,8 @@ ENV GO111MODULE=on \
 
 COPY / /home/container/student
 
+RUN export GIN_MODE=release
+
 RUN go env -w GOPROXY=https://goproxy.cn,direct
 
 RUN go build -o student

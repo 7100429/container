@@ -23,6 +23,11 @@ func SetupConfig(configName string) {
 
 	err = ConfigFile.Section("mysql").MapTo(&global.CONFIG.Mysql)
 	if err != nil {
-		log.Fatalf("Cfg.MapTo Database err: %v", err)
+		log.Fatalf("Cfg.MapTo mysql err: %v", err)
+	}
+
+	err = ConfigFile.Section("redis").MapTo(&global.CONFIG.Redis)
+	if err != nil {
+		log.Fatalf("Cfg.MapTo redis err: %v", err)
 	}
 }

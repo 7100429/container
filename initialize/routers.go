@@ -11,7 +11,7 @@ import (
 
 func SetupRouter() *gin.Engine {
 	router := gin.Default()
-
+	
 	if global.CONFIG.Server.RunMode == "release" {
 		gin.SetMode(gin.ReleaseMode)
 	} else {

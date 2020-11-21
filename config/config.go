@@ -5,6 +5,7 @@ import "time"
 type Config struct {
 	Server server
 	Mysql  mysql
+	Redis redis
 }
 
 
@@ -24,4 +25,11 @@ type mysql struct {
 	TablePrefix string
 	MaxIdleConn int
 	MaxOpenConn int
+}
+
+type redis struct {
+	Host string
+	Port int
+	Password string
+	Db int
 }
