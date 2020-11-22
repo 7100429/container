@@ -1,11 +1,9 @@
 package controllers
 
 import (
-	"fmt"
 	"gitee.com/chensyf/container/app/main/models"
 	"gitee.com/chensyf/container/app/main/models/request"
 	"gitee.com/chensyf/container/app/main/services"
-	"gitee.com/chensyf/container/pkg/utils"
 	"github.com/gin-gonic/gin"
 	"net/http"
 )
@@ -39,15 +37,13 @@ func (s *studentController) FindStudentByName(c *gin.Context) {
 	}
 	var student models.Student
 
-	fmt.Println(c.Request.URL.String())
-
-	ok := utils.GetResponse(c.Request.URL.String(), &student)
-	if ok {
-		c.JSON(http.StatusOK, gin.H{
-			"student": student,
-		})
-		return
-	}
+	//ok := utils.GetResponse(c.Request.URL.String(), &student)
+	//if ok {
+	//	c.JSON(http.StatusOK, gin.H{
+	//		"student": student,
+	//	})
+	//	return
+	//}
 
 	student, err := services.StudentService.FindStudentByName(name)
 	if err != nil {
@@ -57,7 +53,7 @@ func (s *studentController) FindStudentByName(c *gin.Context) {
 		return
 	}
 
-	_ = utils.SetResponse(c.Request.URL.String(), student)
+	//_ = utils.SetResponse(c.Request.URL.String(), student)
 
 	c.JSON(http.StatusOK, gin.H{
 		"student": student,
