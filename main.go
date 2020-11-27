@@ -17,9 +17,6 @@ func main() {
 	// mysql
 	initialize.SetupMysql()
 
-	// redis
-	initialize.SetupRedis()
-
 	// tables
 	initialize.SetupTables()
 
