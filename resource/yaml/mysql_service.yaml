@@ -6,7 +6,7 @@ metadata:
 spec:
   selector: # Pod选择器
     app: mysql
-  type: ClusterIP # service 的类型
+  type: NodePort # service 的类型
   ports:
     - name: http
       port: 3306       # service 的端口号

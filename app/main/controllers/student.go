@@ -37,14 +37,6 @@ func (s *studentController) FindStudentByName(c *gin.Context) {
 	}
 	var student models.Student
 
-	//ok := utils.GetResponse(c.Request.URL.String(), &student)
-	//if ok {
-	//	c.JSON(http.StatusOK, gin.H{
-	//		"student": student,
-	//	})
-	//	return
-	//}
-
 	student, err := services.StudentService.FindStudentByName(name)
 	if err != nil {
 		c.JSON(http.StatusNotFound, gin.H{
